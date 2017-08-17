@@ -2,44 +2,196 @@
 	box-sizing: border-box;
 }
 
-body {
+body#index {
+	background-image: url("images/test-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* height: 100%;
+	width: 100%;  */   /* Need to make it full screen */
+}
+
+body#gallery {
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: 150px 600px;
-	grid-template-rows: 150px 300px 500px 150px;
+	grid-template-columns: 250px 250px 250px 250px;
+	grid-template-rows: 150px minmax(500px, auto) 500px 150px;
+	grid-template-areas: "a a a a"
+						 "b b b b"
+						 "c d e f"
+						 "g g g g"
+}
+ /* grid-gap not followng CSS & dimensions not following rows/column rules*/
+
+header#gallery {
+	background-color: green;
+	border: 5px solid black; 
+	grid-area: a;
+	/*display: flex; 
+	justify-content: space-between;
+	align-items: center;} */
+}
+
+#pin-map {
+	grid-area: b;
+	background-color: blue;
+	border:5px solid black;
+	height: 400px;
+}
+
+#photo-display {
+	grid-area: c;
+	background-color: yellow;
+	border: 5px solid black;
+	height: 500px;
+}
+
+#nav-footer {
+	grid-area: g;
+	background-color: orange;
+	border: 5px solid black; 
+}
+ #photo-display div {
+ 	/*display: none;*/
+ 	display: flex;
+ 	flex: 1;
+ }
+
+  #photo-display div img{
+  	width:100%;
+  }
+
+div blockquote{
+	background:rgba(0,0,0, .5);
+
+}
+
+p.index {
+	font-weight: 800;
+	font-size: 20px;
+	color:white;
+	 opacity: none; want to make sure text on banner does not become opaque 
+} 
+
+cite {
+	font-size: 10px;
+	margin: 0;
+}
+
+nav.index {
+	padding: 10px;
+	font-weight: 700;
+	font-size: 12px;
+	/* width: 100%; not centering to blockquote */
+} 
+
+a.index {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: white;  /* change to a stronger color after opacity is fixed */
+}
+
+a {
+	color: green;
+}
+
+
+/* nav {
+	background: black;
+}  stuff is changing in CSS when adding other cats */
+
+body {
+	/* background-color: black; */
+	/*font-family: "Open Sans", "sans-serif";*/
+	/* color: white;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 250px 600px;
+	grid-template-rows: 150px 300px minmax(500px, auto) 150px;
 	grid-template-areas: "a a"
 						 "b c"
 						 "d e"
 						 "f f"
 
 }
-
+/*
 header {
-	background-color: yellow;
-	border: 5px solid black;
-	grid-area: a;
+	background-color: rgb(17, 16, 16);
+	/* border: 5px solid white; 
+	grid-area: a; */
+	/* display: flex; 
+	justify-content: space-between;
+	align-items: center;} */
+/*
+
+header h1 {
+	text-align: center;
 }
 
-aside {
-	background-color: yellow;
-	border: 5px solid black;
+nav {
+	text-align: center;
+	font-size: 14px;
+} */
+
+/* nav ul { /* this displays flex because you want this li to reflect? */
+	/*  display: flex;
+
+}  */
+/*
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-style: bold;
+}
+
+a:hover {
+	color: gray;
+}
+
+
+.live-feed {
+	background-color: black;
+	border: 5px solid white;
 	grid-area: b;
 }
 
+.secondary-nav {
+	padding: 10px;
+}
+
 #map {
-	background-color: yellow;
-	border: 5px solid black;
+	background-color: green;
+	border: 5px solid white;
 	grid-area: c;
 }
 
 blog {
-	background-color: yellow;
-	border: 5px solid black;
-	grid-area: e;
+	background-color: rgb(17, 16, 16);
+	/* border: 5px solid white; */
+	/*grid-area: e;*/
+/*}*/
+
+.blog {
+	padding: 10px;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.published {
+	font-weight: 300;
+	padding: 10px;
 }
 
 footer {
-	background-color: yellow;
-	border: 5px solid black;
+	background-color: black;
+	border: 5px solid white;
 	grid-area: f;
-}
+} 

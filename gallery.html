@@ -3,28 +3,48 @@
 <head>
 	<title>Gallery</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" media="screen" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"/>
 	<link rel="stylesheet" href="style.css"/>
 	<script type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 </head>
 
-<body id="gallery">
-	<header id="gallery">
-		<nav class="gallery"> 
+<body id="body-gallery">
+	<header id="header-gallery">
+		<nav> 
 			<ul>
-				<a href="#" class="gallery">About</a> | <a href="#" class="gallery">Gallery</a>
+				<a href="#">Home</a> | <a href="#">About</a> | <a href="#">Gallery</a>
 			</ul>
 		</nav>
 	</header>
 
 <div id="pin-map">
-	<!-- what type of contianer to put this in for hardwire of 5 places-->
+	<!-- BARRY: what type of contianer to put this in for hardwire of 5 places-->
 </div>
 
 
 <section id="photo-display">
-	<!--display 5 photos using flex from designated pin point-->
-	<div class="sydney">
+	<!--display 5 photos using flex from designated pin point/ hide on page load
+
+	need titles to appear when clicked
+-->
+	<div id="sydney" class="sydney">
+		<div id="tall">
+			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- close #tall div-->
+
+		<div id="stacked">
+			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- closes #stacked div-->
+		
+		<div id="right">	
+			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!--closes #horizontal-wide-->
+	</div><!-- end #sydney -->
+<!--
+	<div class="antelope-canyon">
 		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
 		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
 		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
@@ -32,14 +52,36 @@
 		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
 	</div>
 
-	<div class="bali">
+	<div class="perth">
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
 	</div>
+
+	<div class="nadi">
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+	</div>
+
+	<div class="auckland">
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+	</div>
+-->
 </section>
 
-<footer>
-	<nav id="nav-footer">
+<footer id="footer-gallery">
+	<nav class="nav-footer">
 		<ul>
-			<a href="#" class="gallery">About</a> | <a href="#" class="gallery">Gallery</a>
+			<a href="#">Home</a> | <a href="#">About</a> | <a href="#">Gallery</a>
 		</ul>
 	</nav>
 </footer>
@@ -47,6 +89,6 @@
 
 
 
-
+<script src="js/script.js"></script>
 </body>
 </html>

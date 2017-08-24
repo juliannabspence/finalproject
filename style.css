@@ -1,15 +1,282 @@
 * {
 	box-sizing: border-box;
+	/* font-family: ; */
 }
 
-body#index {
+body#body-index {
+	background-image: url("images/test-bg.jpg");
+	background-size: cover;
+	display: grid;
+	grid-template-columns: 150px 250px 500px 250px;
+	grid-template-rows: 100% 100% 100%;
+	grid-template-areas: "a"
+						 "b"
+						 "c"
+}						
+
+
+
+	/*  BARRY:
+	- want footer to display in the bottom of the body
+grid - a ,b ,c .trans-banner & #footer-index, #body-index
+	 */
+}
+
+div.trans-banner {
+	grid-area: b;
+	background: rgba(0,0,0, .5);
+	color: white;
+	text-align: center;
+	/* justify-content: center;  BARRY: how to center blockquote so it appears a quarter down the page; RESET*/
+}
+
+#footer-index {
+	grid-area: c; /* BARRY: won't appear all the way across page; */
+	background: black;
+	text-align: center;
+	padding: 15px;
+}
+
+#footer-index a {
+	color: white;
+	text-decoration: none;
+}
+
+#footer-index a:hover {
+	color: gray;
+}
+
+#footer-index ul { /* makes bar in between nav white */
+	color: white;
+	padding: 0;
+}
+
+
+
+/* GALLERY CSS */
+
+#body-gallery {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 250px 250px 250px 250px;
+	grid-template-rows: 50px minmax(500px, auto) 500px 150px;
+	grid-template-areas: "a a a a"
+						 "b b b b"
+						 "c c c c"
+						 "d d d d"
+}
+
+#header-gallery {
+	grid-area: a;
+	background: black;
+	text-align: right;
+	padding-top: 15px;
+	padding-right: 10px;
+}
+
+#header-gallery ul { /* makes bars between nav white */
+	color: white;
+}
+
+#header-gallery nav ul a {
+	color: white;
+	text-decoration: none;
+}
+
+#pin-map {
+	grid-area: b;
+	background: blue;
+	border: 5px solid black;
+} 
+
+#photo-display {
+	grid-area: c; 
+	background: yellow;
+	border: 5px solid black;
+	display: flex;
+}
+
+div#sydney {
+	display: flex;
+	justify-content: space-between;
+	width:100%;
+	/* *********
+	BARRY:
+	1. CANNOT GET THESE TO DIVIDE HOW I WOULD LIKE THEM TO (#RIGHT I WANT TO FILL THE WHITE BOX WITH TWO STACKED HORIZONTAL PHOTOS / #TALL I WANT TO FILL THE RED BOX WITH A VERTICAL IMAGE / #STACKED TWO IMAGES TO APPEAR STACKED ON TOP OF ONE ANOTHER
+	2. CANOT GET THE SIZES TO ADJUST. TRIED USING FLEX: 1/ETC TO ADJUST DIFFERENT BOX SIZES AND CANNOT GET TO WORK
+	******* */
+}
+
+div#stacked {
+	background: orange;
+	flex-direction: column;
+}
+
+div#stacked img {
+	border: 5px solid white;
+	/* ******
+	BARRY:
+	1. IS THE BELOW W THE CORRECT WAY TO GO ABOUT SCALING TO FIT INSIDE THE #STACKED DIV? OR AM I WANTING TO DO SOMETHING WITH TELLING THIS TO BE 100% OF PARENT?
+	****** */
+	height: 250px;
+}
+
+div#right {
+	background: yellow;
+	flex: 2;
+}
+
+div#right img {
+	border: 5px solid yellow;
+	/* ******
+	BARRY:
+	1. IS THE BELOW W/H THE CORRECT WAY TO GO ABOUT SCALING TO FIT INSIDE THE #RIGHT DIV?
+	****** */
+	width: 520px;
+	height: 250px;
+}
+
+div#tall {
+	background: red;
+} 
+
+div#tall img {
+	border: 5px solid black;
+	height: 480px;
+	width: 270px;
+}
+
+/*#tall, #stacked, #right {
+	border: 5px solid black;
+}
+*/
+
+
+#footer-gallery {
+	grid-area: d;
+	background: black;
+}
+
+#footer-gallery nav ul {
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#footer-gallery nav ul a {
+	color: white;
+	text-decoration: none;
+}
+
+#footer-gallery nav ul a:hover {
+	color: gray;
+}
+
+/* *******  ABOUT CSS ****** */
+
+body#about {
+	display: grid;
+	grid-template-columns: 450px 450px;
+	grid-template-rows: 50px minmax(500px,auto) 150px;
+	grid-template-areas: "a a"
+						 "b b"
+						 "c c"
+}
+
+
+header#header-about {
+	grid-area: a;
+	background: black; 
+	text-align: right;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+#header-about ul { /* makes bars between nav white */
+	color: white;
+	margin: 0;
+	padding: 10px;
+}
+
+#header-about nav ul a {
+	color: white; 
+	text-decoration: none;
+}
+
+section#about-content {
+	grid-area: b;
+	background: blue; 
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	/* *******
+	 BARRY: 
+	 1. CAN'T SEPARATE THE TWO. TRIED JUSTIFY-CONTENT SPACE-AROUND AND NOT WORKING 
+	 2. HOW CAN I SET TO FILL WHOLE SCREEN? IS THIS SOMETHING TO DO WITH MY DIMENSIONS?
+	 ********* */
+}
+
+div#about-info {
+	background:rgba(0,0,0, .5);
+	width: 450px;
+}
+
+div#about-info h1 {
+	color: white;
+	padding-left: 20px;
+}
+
+div#about-info p {
+	padding: 0 20px 0 20px;
+	color: white;
+}
+
+div#me img {
+	border-radius: 200px;
+	width: 400px;
+	height: 400px;
+} 
+
+footer#footer-about {
+	grid-area: c; 
+	background: black;
+	justify-content: space-around;
+}
+
+#footer-about nav ul {
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+}
+
+#footer-about nav ul a {
+	color: white;
+	text-decoration: none;
+}
+
+#footer-about nav ul a:hover {
+	color: gray;
+}
+
+
+/* --------------OLD OLD OLD OLD _DNU------------ */
+/*
+body#body-index {
 	background-image: url("images/test-bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	/* display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows:75% 25%;
+	grid-template-areas: "a"
+						 "b";
 	/* height: 100%;
-	width: 100%;  */   /* Need to make it full screen */
-}
+	width: 100%;  */   /* Need to make it full screen 
+}/
+
+
 
 body#gallery {
 	display: grid;
@@ -21,7 +288,7 @@ body#gallery {
 						 "c d e f"
 						 "g g g g"
 }
- /* grid-gap not followng CSS & dimensions not following rows/column rules*/
+ /* grid-gap not followng CSS & dimensions not following rows/column rules
 
 header#gallery {
 	background-color: green;
@@ -29,7 +296,7 @@ header#gallery {
 	grid-area: a;
 	/*display: flex; 
 	justify-content: space-between;
-	align-items: center;} */
+	align-items: center;} 
 }
 
 #pin-map {
@@ -39,32 +306,11 @@ header#gallery {
 	height: 400px;
 }
 
-#photo-display {
-	grid-area: c;
-	background-color: yellow;
-	border: 5px solid black;
-	height: 500px;
-}
-
-#nav-footer {
-	grid-area: g;
-	background-color: orange;
-	border: 5px solid black; 
-}
- #photo-display div {
- 	/*display: none;*/
- 	display: flex;
- 	flex: 1;
- }
 
   #photo-display div img{
   	width:100%;
   }
 
-div blockquote{
-	background:rgba(0,0,0, .5);
-
-}
 
 p.index {
 	font-weight: 800;
@@ -83,7 +329,7 @@ nav.index {
 	font-weight: 700;
 	font-size: 12px;
 	/* width: 100%; not centering to blockquote */
-} 
+/*} 
 
 a.index {
 	text-decoration: none;
@@ -91,19 +337,19 @@ a.index {
 }
 
 a:hover {
-	color: white;  /* change to a stronger color after opacity is fixed */
+	color: white;  /* change to a stronger color after opacity is fixed 
 }
 
 a {
 	color: green;
 }
-
+*/
 
 /* nav {
 	background: black;
 }  stuff is changing in CSS when adding other cats */
 
-body {
+/* body {
 	/* background-color: black; */
 	/*font-family: "Open Sans", "sans-serif";*/
 	/* color: white;
@@ -178,7 +424,7 @@ blog {
 	/* border: 5px solid white; */
 	/*grid-area: e;*/
 /*}*/
-
+/*
 .blog {
 	padding: 10px;
 	font-weight: 400;
@@ -194,4 +440,4 @@ footer {
 	background-color: black;
 	border: 5px solid white;
 	grid-area: f;
-} 
+} */

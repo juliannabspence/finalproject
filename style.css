@@ -4,33 +4,33 @@
 }
 
 body#body-index {
+	/*BARRY: HOW DO I MAKE IT SO I DONT HAVE TO SCROLL ON A PAGE FOR EVERYTHING TO FIT? */
 	background-image: url("images/test-bg.jpg");
 	background-size: cover;
+	background-position: center;
+	/* height: 580px;
+	background-repeat: no-repeat; */
 	display: grid;
-	grid-template-columns: 150px 250px 500px 250px;
-	grid-template-rows: 100% 100% 100%;
+	grid-template-columns: 100%;
+	grid-template-rows: 100% 500px 100%;
 	grid-template-areas: "a"
 						 "b"
 						 "c"
 }						
 
-
-
-	/*  BARRY:
-	- want footer to display in the bottom of the body
-grid - a ,b ,c .trans-banner & #footer-index, #body-index
-	 */
+header div.trans-banner{
+	grid-area: a;
 }
 
 div.trans-banner {
-	grid-area: b;
 	background: rgba(0,0,0, .5);
+	margin-top: 50px;
+	padding: 10px;
 	color: white;
 	text-align: center;
-	/* justify-content: center;  BARRY: how to center blockquote so it appears a quarter down the page; RESET*/
 }
 
-#footer-index {
+footer#footer-index {
 	grid-area: c; /* BARRY: won't appear all the way across page; */
 	background: black;
 	text-align: center;
@@ -58,7 +58,7 @@ div.trans-banner {
 #body-gallery {
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: 250px 250px 250px 250px;
+	grid-template-columns: 250px 250px 250px 250px; /* BARYY: MAKE THESE 100% OR SOMETHING SO REACHES FULL SCREEN LENGTH?*/
 	grid-template-rows: 50px minmax(500px, auto) 500px 150px;
 	grid-template-areas: "a a a a"
 						 "b b b b"

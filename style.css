@@ -58,8 +58,8 @@ footer#footer-index {
 #body-gallery {
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: 250px 250px 250px 250px; /* BARYY: MAKE THESE 100% OR SOMETHING SO REACHES FULL SCREEN LENGTH?*/
-	grid-template-rows: 50px minmax(500px, auto) 500px 150px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 50px minmax(500px, auto) auto minmax(150px, auto);
 	grid-template-areas: "a a a a"
 						 "b b b b"
 						 "c c c c"
@@ -83,12 +83,24 @@ footer#footer-index {
 	text-decoration: none;
 }
 
+
+/* PIN MAP START */
+/* API Key: AIzaSyAK0FY1Gb0Z-Z_EYBOj7JZ0oDILr306sQU */
 #pin-map {
 	grid-area: b;
 	background: blue;
 	border: 5px solid black;
+	height: 100%;
 } 
 
+html, body {
+	height: 100%;
+}
+
+
+ /* PIN MAP END */
+
+/* PHOTOS */
 #photo-display {
 	grid-area: c; 
 	background: yellow;
@@ -96,60 +108,56 @@ footer#footer-index {
 	display: flex;
 }
 
-div#sydney {
+
+div#sydney,  div#antelope, div#perth, div#nadi, div#auckland {
 	display: flex;
 	justify-content: space-between;
 	width:100%;
-	/* *********
-	BARRY:
-	1. CANNOT GET THESE TO DIVIDE HOW I WOULD LIKE THEM TO (#RIGHT I WANT TO FILL THE WHITE BOX WITH TWO STACKED HORIZONTAL PHOTOS / #TALL I WANT TO FILL THE RED BOX WITH A VERTICAL IMAGE / #STACKED TWO IMAGES TO APPEAR STACKED ON TOP OF ONE ANOTHER
-	2. CANOT GET THE SIZES TO ADJUST. TRIED USING FLEX: 1/ETC TO ADJUST DIFFERENT BOX SIZES AND CANNOT GET TO WORK
-	******* */
 }
 
-div#stacked {
+div.stacked {
 	background: orange;
 	flex-direction: column;
 }
 
-div#stacked img {
+div.stacked img {
 	border: 5px solid white;
 	/* ******
 	BARRY:
-	1. IS THE BELOW W THE CORRECT WAY TO GO ABOUT SCALING TO FIT INSIDE THE #STACKED DIV? OR AM I WANTING TO DO SOMETHING WITH TELLING THIS TO BE 100% OF PARENT?
+	1. CAN'T GET THESE TO TAKE UP THE #PHOTO-DISPLAY SPACE
+	2. CAN'T GET THE BOXES FOR EACH DIV TO BE EQUAL SIZE
 	****** */
 	height: 250px;
 }
 
-div#right {
+/* div.stacked div img, div.right div img, div.tall div img {
+	width: 100%;
+} */
+
+
+div.right {
 	background: yellow;
 	flex: 2;
 }
 
-div#right img {
+div.right img {
 	border: 5px solid yellow;
-	/* ******
-	BARRY:
-	1. IS THE BELOW W/H THE CORRECT WAY TO GO ABOUT SCALING TO FIT INSIDE THE #RIGHT DIV?
-	****** */
 	width: 520px;
 	height: 250px;
 }
 
-div#tall {
+div.tall {
 	background: red;
 } 
 
-div#tall img {
+div.tall img {
 	border: 5px solid black;
 	height: 480px;
 	width: 270px;
 }
 
-/*#tall, #stacked, #right {
-	border: 5px solid black;
-}
-*/
+
+/* ***************** PHOTOS END *********************** */
 
 
 #footer-gallery {
@@ -205,7 +213,7 @@ header#header-about {
 
 section#about-content {
 	grid-area: b;
-	background: blue; 
+	background: yellow; 
 	display: flex;
 	align-items: center;
 	padding-left: 10px;

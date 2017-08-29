@@ -1,25 +1,107 @@
-$('document').ready(function(){
+// $('document').ready(function(){
 
 // GALLERY PAGE JS ********
 
-// On page load, hide images(ALL PHOTO CLASSES) in #photo-display
-	//$("#photo-display").hide();	MAYBE DONT HID PHOTO DISPLAY BUT HAVE IT DISPLAY RANDOM PHOTOS
-	$("div#sydney .sydney").hide();
-	/* $("div#antelope").hide();
-	$("div#nadi").hide();
-	$("div#auckland").hide();
-	$("div#sedona").hide (); */
-	$("#pin-map").click(showSydney); // need to change to on click of sydney pin
-	//$("#pin-map").click(showAntelope);
-	//$("#pin-map").click(showNadi);
-	//$("#pin-map").click(showAuckland);
-	//$("#pin-map").click(showSedona);
+// On page load, hide images(ALL PHOTO CLASSES) in #photo-display & photo-display div
+	// Hides all images on page load
+	$(".sydney").hide();
+	$(".antelope").hide();
+	$(".perth").hide();
+	$(".nadi").hide();
+	$(".auckland").hide();
+	
 
-// BARRY: I AM SHOCKED THAT I EVEN TYPED THIS IN RIGHT TO HIDE #PHOTO-DISPLAY BUT... WHAT DO I PUT IN THE BLANK SPACE NOW SO IT SNTO SO BLANK?
- 	function showSydney() {
- 		//$("#photo-display").show();
- 		$("div#sydney .sydney").show();
- 	}
+	function changeCity() {
+		//console.log(this)
+		var city = this.name
+    
+		//console.log("name", this.name)
+			showCity(city) 
+	}
+
+
+	function initMap(){
+		// MAP APPEAR
+		// BARRY: get map to not repeat
+		map = new google.maps.Map(document.getElementById('pin-map'), {
+	  		center: {lat: -33.8688, lng: 151.2093},
+	  		zoom: 3
+		});
+
+		/* LOCATION #1 */
+		var sydney = {lat: -33.8688, lng: 151.2093};
+
+		// Display pin on pin-map 
+		var marker = new google.maps.Marker({
+  			position: sydney,
+  			map: map,
+  			name: "sydney" 
+  		});
+
+  		marker.addListener("click", changeCity);
+
+
+		/* LOCATION #2 */
+		var antelope = {lat: 36.861, lng: -111.374};
+
+		var marker = new google.maps.Marker({
+  			position: antelope,
+  			map: map,
+  			name: "antelope" 
+  		});
+
+  		marker.addListener("click", changeCity);
+
+		/*LOCATION #3 */
+		var perth = {lat: -31.950, lng: 115.860};
+
+		var marker = new google.maps.Marker({
+  			position: perth,
+  			map: map,
+  			name: "perth" 
+  		});
+
+  		marker.addListener("click", changeCity);
+
+		/* LOCATION #4 */
+		var nadi = {lat: -17.776, lng: 177.435};
+
+		var marker = new google.maps.Marker({
+  			position: nadi,
+  			map: map,
+  			name: "nadi" 
+  		});
+
+  		marker.addListener("click", changeCity);
+
+		/* LOCATION #5 */
+		var auckland = {lat: -36.848, lng: 174.763};
+
+		var marker = new google.maps.Marker({
+  			position: auckland,
+  			map: map,
+  			name: "auckland" 
+  		});
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+	}
+// END MAP------------
+
+
+
+	function showCity(name) 
+	{
+		$(".city").hide();
+		$("."+name).show();
+	}
+	// hide previous city
+
+
+ 	/* function showPhotos() {
+ 		$("#photo-display").show();
+ 		//$("div#sydney .sydney").show();
+ 	} */
 
  	/* function showAntelope(){
 		$("div#antelope").show();
@@ -38,12 +120,5 @@ $('document').ready(function(){
 	}
 	*/
 
-// Display pins on pin map 
-// Detect when user clicks a pin and display city images
-// On click of pin, load images for selected city
-// If user selects sydney pin, display .sydney
-	// $("#sydney").click()
-	// if (city == "sydney") { $("photo-display").show("class", "sydney")}
 
-
-});
+// });

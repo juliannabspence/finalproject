@@ -20,66 +20,100 @@
 
 <div id="pin-map">
 	<!-- BARRY: what type of contianer to put this in for hardwire of 5 places-->
+	<script defer 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK0FY1Gb0Z-Z_EYBOj7JZ0oDILr306sQU&callback=initMap">
+    </script>
+
 </div>
 
-
+<!-- BARRY: HOW TO PREVENT PHOTOS FROM FLICKERING DURING REFRESH -->
 <section id="photo-display">
-	<!--display 5 photos using flex from designated pin point/ hide on page load
+<!-- LOCATION 1 -->
+	<div id="sydney" class="sydney city">
+		<div class="tall">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- close .tall div-->
 
-	need titles to appear when clicked
--->
-	<div id="sydney" class="sydney">
-		<div id="tall">
-			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		</div><!-- close #tall div-->
-
-		<div id="stacked">
-			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		</div><!-- closes #stacked div-->
+		<div class="stacked">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- closes .stacked div-->
 		
-		<div id="right">	
-			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-			<div class="sydney"><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		</div><!--closes #right-->
+		<div class="right">	
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!--closes .right-->
 	</div><!-- end #sydney -->
-<!--
-	BARRY: INSTEAD OF MAKING IDS HERE SHOULD I BE MAKING EVERYTHING IN EACH CITY CLASSES OF .TALL/.RIGHT, ETC? 
 
-	DONT CHANGE CLASS/DIV NAMES TO MATCH JS TAGS UNTIL CONFIRMATION ON ABOVE
+<!-- LOCATION 2 -->
+	<div id="antelope" class="antelope city">
+		<div class="tall">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- close .tall div-->
 
-	<div class="antelope-canyon">
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		<div class="stacked">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- closes .stacked div-->
+		
+		<div class="right">	
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!--closes .right-->
 	</div>
 
-	<div class="perth">
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+<!-- LOCATION 3 -->
+	<div id="perth" class="perth city">
+		<div class="tall">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- close .tall div-->
+
+		<div class="stacked">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- closes .stacked div-->
+		
+		<div class="right">	
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!--closes .right-->
+		</div><!--closes #right-->
 	</div>
 
-	<div class="nadi">
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+<!-- LOCATION 4 -->
+	<div id="nadi" class="nadi city">
+		<div class="tall">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- close .tall div-->
+
+		<div class="stacked">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- closes .stacked div-->
+		
+		<div class="right">	
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!--closes .right-->
 	</div>
 
-	<div class="auckland">
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-		<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
-	</div>
--->
+<!-- LOCATION 5 -->
+	<div  id="auckland" class="auckland city">
+		<div class="tall">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- close .tall div-->
+
+		<div class="stacked">
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!-- closes .stacked div-->
+		
+		<div class="right">	
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+			<div><img src="https://media.giphy.com/media/l1J3rVyvOsa0iA1Py/giphy-downsized.gif" alt=""></div>
+		</div><!--closes .right-->
+	</div> 
+
 </section>
 
 <footer id="footer-gallery">
@@ -91,8 +125,9 @@
 </footer>
 
 
+ <script src="js/script.js"></script>
 
 
-<script src="js/script.js"></script>
+
 </body>
 </html>

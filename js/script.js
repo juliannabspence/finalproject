@@ -1,24 +1,3 @@
-// $('document').ready(function(){
-
-// GALLERY PAGE JS ********
-
-// On page load, hide images(ALL PHOTO CLASSES) in #photo-display & photo-display div
-	// Hides all images on page load
-	$(".sydney").hide();
-	$(".antelope").hide();
-	$(".perth").hide();
-	$(".nadi").hide();
-	$(".auckland").hide();
-	
-
-	function changeCity() {
-		//console.log(this)
-		var city = this.name
-    
-		//console.log("name", this.name)
-			showCity(city) 
-	}
-
 
 	function initMap(){
 		// MAP APPEAR
@@ -81,11 +60,34 @@
   			position: auckland,
   			map: map,
   			name: "auckland" 
-  		});
+  		}); 
 
   		// Detect when marker is clicked
 		marker.addListener("click", changeCity);
 	}
+
+
+
+// GALLERY PAGE JS ********
+
+// On page load, hide images(ALL PHOTO CLASSES) in #photo-display & photo-display div
+	// Hides all images on page load
+	/*$(".sydney").hide();
+	$(".antelope").hide();
+	$(".perth").hide();
+	$(".nadi").hide();
+	$(".auckland").hide(); */
+	
+
+	function changeCity() {
+		//console.log(this)
+		var city = this.name
+    
+		//console.log("name", this.name)
+			showCity(city) 
+	}
+
+
 // END MAP------------
 
 
@@ -119,6 +121,3 @@
 		$("div#sedona").show();
 	}
 	*/
-
-
-// });

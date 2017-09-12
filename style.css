@@ -33,7 +33,7 @@ footer#footer-index {
 	color: gray;
 }
 
-#footer-index ul { /* makes bar in between nav white */
+#footer-index ul { 
 	color: white;
 	padding: 0;
 }
@@ -57,12 +57,12 @@ footer#footer-index {
 #header-gallery {
 	grid-area: a;
 	background: black;
-	text-align: right;
+	text-align: center;
 	padding-top: 15px;
 	padding-right: 10px;
 }
 
-#header-gallery ul { /* makes bars between nav white */
+#header-gallery ul { 
 	color: white;
 }
 
@@ -81,7 +81,7 @@ footer#footer-index {
 #pin-map {
 	grid-area: b;
 	/* background: blue; */
-	border: 5px solid black;
+	/* border: 5px solid black; */
 	height: 100%;
 } 
 
@@ -96,16 +96,206 @@ footer#footer-index {
 #photo-display {
 	grid-area: c; 
 	background: white;
-	border: 5px solid black;
+	/*border: 3px solid black; */
 	display: flex; 
 }
 
-.city {
+#photo-display #city-container{
+	display:none;
+	width:100%;
+}
+.grid {
+  display:grid;
+  grid-gap: 30px;
+  grid-template-columns:repeat(auto-fit,minmax(300px, 1fr));
+  grid-template-rows:repeat(4, 100px)
+}
+
+.item{
+  background:green;
+  border:2px solid black;
+  grid-row-start:auto;
+}
+.second {
+  grid-column-start:2;
+  grid-column-end: span 1;
+}
+
+.third {
+  grid-column-start:3;
+  grid-column-end: span 1;
+}
+
+.item--small{
+  grid-row-end:span 1;
+}
+
+.item--large{
+  
+  grid-row-end:span 4;
+}
+
+.item--medium{
+  grid-row-end:span 3;
+}
+
+.third.item--medium{
+  grid-row-start:1;
+}
+.third.item--small{
+  grid-row-start:4;
+}
+.sydney div{
+  background-size:cover;
+  background-position: center center;
+}
+
+/* .sydney .item--large{
+  background-image:url('../BARRY/images/_sydney/sydney-4.jpg');
+} */
+
+div[data-city=sydney] .first.item--large{
+	background-image: url("images/_sydney/sydney-3.jpg");
+	/*BARRY */
+}
+
+div[data-city=sydney] .second.item--small{
+  background-size: cover;
+  background-position:30% 60%; 
+  background-image:url('images/_sydney/sydney-1.jpg');
+}
+
+div[data-city=sydney] .second.item--medium{
+  background-image:url('images/_sydney/sydney-2.jpg');
+  background-repeat: no-repeat;
+}
+
+div[data-city=sydney] .third.item--medium{
+  background-image:url('images/_sydney/sydney-5.jpg');
+  background-repeat: no-repeat;
+}
+
+div[data-city=sydney] .third.item--small{
+  background-image:url('images/_sydney/sydney-4.jpg');
+  background-position: center;
+}
+
+
+/* LOCATION 2 */
+div[data-cty=perth] .perth.item-large {
+	background-image: url("images/_perth/perth-3.jpg");
+} /*BARRY HELP */
+
+
+div[data-city=perth] .second.item--small {
+  background-size: cover;
+  background-position:20% 70%;
+  background-image:url('images/_perth/perth-4.jpg');
+}
+
+div[data-city=perth] .second.item--medium {
+  background-image:url('images/_perth/perth-2.jpg');
+  background-size: cover;
+}
+
+div[data-city=perth] .third.item--medium{
+  background-image:url('images/_perth/perth-5.jpg');
+}
+
+div[data-city=perth] .third.item--small{
+  background-image:url('images/_perth/perth-1.jpg');
+  background-position: center;
+
+/*BARRY - SIZING */
+}
+
+
+/* LOCATION 3 */
+div[data-cty=nadi] .perth.item-large {
+	background-image: url("images/_nadi/nadi-3.jpg");
+} /*BARRY HELP */
+
+
+div[data-city=nadi] .second.item--small {
+  background-size: cover;
+  background-position:20% 70%;
+  background-image:url('images/_nadi/nadi-5.jpg');
+}
+
+div[data-city=nadi] .second.item--medium {
+  background-image:url('images/_nadi/nadi-1.jpg');
+  background-size: cover;
+}
+
+div[data-city=nadi] .third.item--medium{
+  background-image:url('images/_nadi/nadi-2.jpg');
+}
+
+div[data-city=nadi] .third.item--small{
+  background-image:url('images/_nadi/nadi-4.jpg');
+  background-position: center;
+  /*BARRY SIZING */
+}
+
+/* LOCATION 4 */
+div[data-cty=auckland] .perth.item-large {
+	background-image: url("images/_auckland/auckland-3.jpg");
+} /*BARRY HELP */
+
+
+div[data-city=auckland] .second.item--small {
+  background-size: cover;
+  background-position:20% 70%;
+  background-image:url('images/_auckland/auckland-5.jpg');
+}
+
+div[data-city=auckland] .second.item--medium {
+  background-image:url('images/_auckland/auckland-1.jpg');
+  background-size: center; /* BARRY HELP */
+}
+
+div[data-city=auckland] .third.item--medium{
+  background-image:url('images/_auckland/auckland-2.jpg');
+}
+
+div[data-city=auckland] .third.item--small{
+  background-image:url('images/_auckland/auckland-4.jpg');
+  /*BARRY SIZING */
+}
+
+/* LOCATION 5 */
+div[data-cty=antelope] .perth.item-large {
+	background-image: url("images/_antelope/antelope-1.jpg");
+} /*BARRY HELP */
+
+
+div[data-city=antelope] .second.item--small {
+  background-size: cover;
+  background-position:30% 60%;
+  background-image:url('images/_antelope/antelope-7.jpg');
+}
+
+div[data-city=antelope] .second.item--medium {
+  background-image:url('images/_antelope/antelope-2.jpg');
+  background-size: cover; 
+}
+
+div[data-city=antelope] .third.item--medium{
+  background-image:url('images/_antelope/antelope-4.jpg');
+}
+
+div[data-city=antelope] .third.item--small{
+  background-image:url('images/_antelope/antelope-6.jpg');
+  background-position: center;
+}
+
+/*.city {
   display:grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
   grid-template-rows: 200px 200px 200px;
   border: 5px solid black;
   grid-gap: 10px;
+  http://www.mikesalway.com.au/wp-content/uploads/2011/07/operahouse-vertical-550px.jpg
 }
 
 .tall {
@@ -122,7 +312,7 @@ footer#footer-index {
 
 .stacked .bottom{
 	background: gray;
-	grid-row: 3/4; /*BARRY: STILL CANNOT GET TO DISPLAY THE WHOLE 3/4 ROW AND NOW THE .RIGHT IS DOING THE SAME THING?*/
+	grid-row: 3/4; 
 	grid-column: 2/3;	
 }
 
@@ -137,7 +327,7 @@ footer#footer-index {
 	grid-row: 2/4;
 	grid-column: 3/4;
 }
-
+*/
 
 /*div.city {
 	display:none;
@@ -202,7 +392,7 @@ div.tall img {
 #footer-gallery nav ul {
 	color: white;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 50px;
 }
 
 #footer-gallery nav ul a {
@@ -214,272 +404,3 @@ div.tall img {
 	color: gray;
 }
 
-/* *******  ABOUT CSS ****** */
-
-body#about {
-	display: grid;
-	grid-template-columns: 450px 450px;
-	grid-template-rows: 50px minmax(500px,auto) 150px;
-	grid-template-areas: "a a"
-						 "b b"
-						 "c c"
-}
-
-
-header#header-about {
-	grid-area: a;
-	background: black; 
-	text-align: right;
-	padding-top: 10px;
-	padding-right: 10px;
-}
-
-#header-about ul { /* makes bars between nav white */
-	color: white;
-	margin: 0;
-	padding: 10px;
-}
-
-#header-about nav ul a {
-	color: white; 
-	text-decoration: none;
-}
-
-section#about-content {
-	grid-area: b;
-	background: yellow; 
-	display: flex;
-	align-items: center;
-	padding-left: 10px;
-	padding-right: 10px;
-	/* *******
-	 BARRY: 
-	 1. CAN'T SEPARATE THE TWO. TRIED JUSTIFY-CONTENT SPACE-AROUND AND NOT WORKING 
-	 2. HOW CAN I SET TO FILL WHOLE SCREEN? IS THIS SOMETHING TO DO WITH MY DIMENSIONS?
-	 ********* */
-}
-
-div#about-info {
-	background:rgba(0,0,0, .5);
-	width: 450px;
-}
-
-div#about-info h1 {
-	color: white;
-	padding-left: 20px;
-}
-
-div#about-info p {
-	padding: 0 20px 0 20px;
-	color: white;
-}
-
-div#me img {
-	border-radius: 200px;
-	width: 400px;
-	height: 400px;
-} 
-
-footer#footer-about {
-	grid-area: c; 
-	background: black;
-	justify-content: space-around;
-}
-
-#footer-about nav ul {
-	color: white;
-	text-align: center;
-	padding-top: 40px;
-}
-
-#footer-about nav ul a {
-	color: white;
-	text-decoration: none;
-}
-
-#footer-about nav ul a:hover {
-	color: gray;
-}
-
-
-/* --------------OLD OLD OLD OLD _DNU------------ */
-/*
-body#body-index {
-	background-image: url("images/test-bg.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	/* display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows:75% 25%;
-	grid-template-areas: "a"
-						 "b";
-	/* height: 100%;
-	width: 100%;  */   /* Need to make it full screen 
-}/
-
-
-
-body#gallery {
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 250px 250px 250px 250px;
-	grid-template-rows: 150px minmax(500px, auto) 500px 150px;
-	grid-template-areas: "a a a a"
-						 "b b b b"
-						 "c d e f"
-						 "g g g g"
-}
- /* grid-gap not followng CSS & dimensions not following rows/column rules
-
-header#gallery {
-	background-color: green;
-	border: 5px solid black; 
-	grid-area: a;
-	/*display: flex; 
-	justify-content: space-between;
-	align-items: center;} 
-}
-
-#pin-map {
-	grid-area: b;
-	background-color: blue;
-	border:5px solid black;
-	height: 400px;
-}
-
-
-  #photo-display div img{
-  	width:100%;
-  }
-
-
-p.index {
-	font-weight: 800;
-	font-size: 20px;
-	color:white;
-	 opacity: none; want to make sure text on banner does not become opaque 
-} 
-
-cite {
-	font-size: 10px;
-	margin: 0;
-}
-
-nav.index {
-	padding: 10px;
-	font-weight: 700;
-	font-size: 12px;
-	/* width: 100%; not centering to blockquote */
-/*} 
-
-a.index {
-	text-decoration: none;
-	color: black;
-}
-
-a:hover {
-	color: white;  /* change to a stronger color after opacity is fixed 
-}
-
-a {
-	color: green;
-}
-*/
-
-/* nav {
-	background: black;
-}  stuff is changing in CSS when adding other cats */
-
-/* body {
-	/* background-color: black; */
-	/*font-family: "Open Sans", "sans-serif";*/
-	/* color: white;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 250px 600px;
-	grid-template-rows: 150px 300px minmax(500px, auto) 150px;
-	grid-template-areas: "a a"
-						 "b c"
-						 "d e"
-						 "f f"
-
-}
-/*
-header {
-	background-color: rgb(17, 16, 16);
-	/* border: 5px solid white; 
-	grid-area: a; */
-	/* display: flex; 
-	justify-content: space-between;
-	align-items: center;} */
-/*
-
-header h1 {
-	text-align: center;
-}
-
-nav {
-	text-align: center;
-	font-size: 14px;
-} */
-
-/* nav ul { /* this displays flex because you want this li to reflect? */
-	/*  display: flex;
-
-}  */
-/*
-ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-a {
-	text-decoration: none;
-	color: white;
-	font-style: bold;
-}
-
-a:hover {
-	color: gray;
-}
-
-
-.live-feed {
-	background-color: black;
-	border: 5px solid white;
-	grid-area: b;
-}
-
-.secondary-nav {
-	padding: 10px;
-}
-
-#map {
-	background-color: green;
-	border: 5px solid white;
-	grid-area: c;
-}
-
-blog {
-	background-color: rgb(17, 16, 16);
-	/* border: 5px solid white; */
-	/*grid-area: e;*/
-/*}*/
-/*
-.blog {
-	padding: 10px;
-	font-weight: 400;
-	font-size: 14px;
-}
-
-.published {
-	font-weight: 300;
-	padding: 10px;
-}
-
-footer {
-	background-color: black;
-	border: 5px solid white;
-	grid-area: f;
-} */

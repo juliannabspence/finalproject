@@ -64,6 +64,19 @@
 
   		// Detect when marker is clicked
 		marker.addListener("click", changeCity);
+	
+
+	/* LOCATION #6 */
+		var dublin = {lat: 53.609, lng: -6.023};
+
+		var marker = new google.maps.Marker({
+  			position: dublin,
+  			map: map,
+  			name: "dublin" 
+  		}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
 	}
 
 
@@ -94,8 +107,10 @@
 
 	function showCity(name) 
 	{
-		$(".city").hide();
-		$("."+name).show();
+    console.log("show", name)
+    $("#city-container").show();
+		// $("#city").hide();
+		$("#city").attr("data-city", name);
 	}
 	// hide previous city
 

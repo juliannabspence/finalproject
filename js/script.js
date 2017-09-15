@@ -103,14 +103,21 @@
 
 // END MAP------------
 
-
+$("pin-map").click(function(){
+  var selected = $(this).attr("class");
+  console.log("selected", selected)
+  $("img").hide();
+  $("img[class="+selected+"]").show()
+})
 
 	function showCity(name) 
 	{
     console.log("show", name)
-    $("#city-container").show();
+    $("#photo-display").show();
+    // $("#city-container").show();
 		// $("#city").hide();
-		$("#city").attr("data-city", name);
+			$("#photo-display").attr("class", name);
+		// $("#city").attr("data-city", name);
 	}
 	// hide previous city
 

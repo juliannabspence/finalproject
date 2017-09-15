@@ -98,13 +98,15 @@ footer#footer-index {
 	background: white;
 	/*border: 3px solid black; */
 	display: flex; 
+	/* margin: 50px; */
 }
 
 #photo-display #city-container{
-	display:none;
+	/*display:none;*/
 	width:100%;
 }
-.grid {
+
+/*.grid {
   display:grid;
   grid-gap: 30px;
   grid-template-columns:repeat(auto-fit,minmax(300px, 1fr));
@@ -148,16 +150,18 @@ footer#footer-index {
 .sydney div{
   background-size:cover;
   background-position: center center;
-}
+}*/
 
 /* .sydney .item--large{
   background-image:url('../BARRY/images/_sydney/sydney-4.jpg');
 } */
-
+/*.flex{
+	display: flex;
+}
 div[data-city=sydney] .first.item--large{
 	background-image: url("images/_sydney/sydney-3.jpg");
 	/*BARRY */
-}
+/*}
 
 div[data-city=sydney] .second.item--small{
   background-size: cover;
@@ -177,15 +181,36 @@ div[data-city=sydney] .third.item--medium{
 
 div[data-city=sydney] .third.item--small{
   background-image:url('images/_sydney/sydney-4.jpg');
-  background-position: center;
+  background-position: center;*/
+/*}*/
+
+/*div[data-city=sydney] .second.item--small{
+  background-size: cover;
+  background-position:30% 60%; 
+  background-image:url('images/_sydney/sydney-1.jpg');
 }
 
+div[data-city=sydney] .second.item--medium{
+  background-image:url('images/_sydney/sydney-2.jpg');
+  background-repeat: no-repeat;
+}
+
+div[data-city=sydney] .third.item--medium{
+  background-image:url('images/_sydney/sydney-5.jpg');
+  background-repeat: no-repeat;
+}
+
+div[data-city=sydney] .third.item--small{
+  background-image:url('images/_sydney/sydney-4.jpg');
+  background-position: center;
+}
+*/
 
 /* LOCATION 2 */
-div[data-cty=perth] .perth.item-large {
+/*div[data-cty=perth] .perth.item--large {
 	background-image: url("images/_perth/perth-3.jpg");
-} /*BARRY HELP */
-
+}*/ /*BARRY HELP */
+/*
 
 div[data-city=perth] .second.item--small {
   background-size: cover;
@@ -205,15 +230,13 @@ div[data-city=perth] .third.item--medium{
 div[data-city=perth] .third.item--small{
   background-image:url('images/_perth/perth-1.jpg');
   background-position: center;
-
-/*BARRY - SIZING */
-}
+}*/
 
 
 /* LOCATION 3 */
-div[data-cty=nadi] .perth.item-large {
+/*div[data-cty=nadi] .nadi.item--large {
 	background-image: url("images/_nadi/nadi-3.jpg");
-} /*BARRY HELP */
+} 
 
 
 div[data-city=nadi] .second.item--small {
@@ -234,13 +257,13 @@ div[data-city=nadi] .third.item--medium{
 div[data-city=nadi] .third.item--small{
   background-image:url('images/_nadi/nadi-4.jpg');
   background-position: center;
-  /*BARRY SIZING */
-}
+  
+}*/
 
 /* LOCATION 4 */
-div[data-cty=auckland] .perth.item-large {
+/*div[data-cty=auckland] .auckland.item--large {
 	background-image: url("images/_auckland/auckland-3.jpg");
-} /*BARRY HELP */
+} 
 
 
 div[data-city=auckland] .second.item--small {
@@ -252,7 +275,7 @@ div[data-city=auckland] .second.item--small {
 div[data-city=auckland] .second.item--medium {
   background-image:url('images/_auckland/auckland-1.jpg');
   background-size: center; /* BARRY HELP */
-}
+/*}
 
 div[data-city=auckland] .third.item--medium{
   background-image:url('images/_auckland/auckland-2.jpg');
@@ -260,13 +283,13 @@ div[data-city=auckland] .third.item--medium{
 
 div[data-city=auckland] .third.item--small{
   background-image:url('images/_auckland/auckland-4.jpg');
-  /*BARRY SIZING */
-}
+ 
+}*/
 
 /* LOCATION 5 */
-div[data-cty=antelope] .perth.item-large {
+/*div[data-cty=antelope] .antelope.item--large {
 	background-image: url("images/_antelope/antelope-1.jpg");
-} /*BARRY HELP */
+} 
 
 
 div[data-city=antelope] .second.item--small {
@@ -287,7 +310,145 @@ div[data-city=antelope] .third.item--medium{
 div[data-city=antelope] .third.item--small{
   background-image:url('images/_antelope/antelope-6.jpg');
   background-position: center;
+}*/
+
+/*#city{
+	height: 40vh;
+	width:100%;
 }
+.column {
+	display: flex;
+	flex-direction:column;
+		background:green;
+
+}*/
+
+
+/*#city>div{
+	width:33.33%;
+}
+#city img {
+	width: 100%;
+	height:100%;
+}
+.item {
+	width:100%;
+}
+.item--small{
+	flex:1;
+}
+
+.item--medium{
+	flex:2;
+}
+.item {
+	background-size:cover;
+}
+
+.top {
+	background-position: center top;
+}
+.center {
+	background-position: center center;
+}*/
+
+
+/*FLEX ATTEMPT */
+
+#photo-display {
+	display: flex;
+}
+
+
+section {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #f5f4f4;
+  font-size: 13px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.section {
+  padding: 2rem;
+  display: block;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1.5em;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* columns keet auto-generated based on available free space */
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense; /*https://css-tricks.com/snippets/css/complete-guide-grid/#article-header-id-23*/
+}
+
+.item {
+  position: relative;   /* so the overlay is positioned relative to this */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  color: #fff;
+  box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer; 
+}
+.item img {
+  object-fit: cover;  /* try playing with this property: 'contain', 'fill', 'cover' */
+  height:100%; /* helps image fit inside of its parent */
+}
+
+.item::after {  /* all of this is for the black overlay effect */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+.item:hover {
+  transform: scale(1.05);  /* creates "zoom" effect when you rollover item */
+}
+    
+.item:hover::after {  /* creates "bright" effect when you rollover item */
+  opacity: 0;
+}
+
+
+  .item--medium {
+    grid-row-end: span 2;
+  }
+
+
+
+  .item--large {
+    grid-row-end: span 3;
+  }
+
+
+  .item--full {
+    grid-column-end: auto;
+  }
+  
+    @media screen and (min-width: 768px) {
+     .item--full{
+        grid-column: 1/-1; /* ensures it spans the whole thing */
+        grid-row-end: span 2;
+      }
+
+    }
+ 
+
+
 
 /*.city {
   display:grid;

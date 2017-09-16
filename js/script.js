@@ -1,11 +1,30 @@
 
 	function initMap(){
-		// MAP APPEAR
-		// BARRY: get map to not repeat
 		map = new google.maps.Map(document.getElementById('pin-map'), {
 	  		center: {lat: -33.8688, lng: 151.2093},
 	  		zoom: 3
 		});
+
+		// var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+  //       var icons = {
+  //         parking: {
+  //           icon: iconBase + 'parking_lot_maps.png'
+  //         }
+  //       };
+
+     
+
+      //   // Create markers.
+        // features.forEach(function(feature) {
+        //   var marker = new google.maps.Marker({
+        //     position: feature.position,
+        //     icon: {
+        //     		path: google.maps.SymbolPath.CIRCLE,
+        //     		scale: 10
+        //   		},
+        //   		draggable: true,
+        //   		map: map
+        // 	});
 
 		/* LOCATION #1 */
 		var sydney = {lat: -33.8688, lng: 151.2093};
@@ -66,7 +85,7 @@
 		marker.addListener("click", changeCity);
 	
 
-	/* LOCATION #6 */
+		/* LOCATION #6 */
 		var dublin = {lat: 53.609, lng: -6.023};
 
 		var marker = new google.maps.Marker({
@@ -77,6 +96,163 @@
 
   		// Detect when marker is clicked
 		marker.addListener("click", changeCity);
+
+
+		/* LOCATION #7 */
+		var london = {lat: 51.509, lng: -0.118};
+
+		var marker = new google.maps.Marker({
+  			position: london,
+  			map: map,
+  			name: "london" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #8 */
+		var byron  = {lat: -28.639, lng: 153.609};
+
+		var marker = new google.maps.Marker({
+  			position: byron,
+  			map: map,
+  			name: "byron" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);	
+
+		/* LOCATION #9 */
+		var gbr  = {lat: -20.282, lng: 149.038};
+
+		var marker = new google.maps.Marker({
+  			position: gbr,
+  			map: map,
+  			name: "gbr" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #10 */
+		var joshua  = {lat: 33.873, lng: -115.901};
+
+		var marker = new google.maps.Marker({
+  			position: joshua,
+  			map: map,
+  			name: "joshua" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);	
+
+		/* LOCATION #11 */
+		var vancouver  = {lat: 49.282, lng: -123.116};
+
+		var marker = new google.maps.Marker({
+  			position: vancouver,
+  			map: map,
+  			name: "vancouver" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #12 */
+		var yosemite  = {lat: 37.865, lng: -119.538};
+
+		var marker = new google.maps.Marker({
+  			position: yosemite,
+  			map: map,
+  			name: "yosemite" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #13 */
+		var sf  = {lat: 37.774, lng: -122.419};
+
+		var marker = new google.maps.Marker({
+  			position: sf,
+  			map: map,
+  			name: "sf" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #14 */
+		var seminyak  = {lat: -8.691, lng: 115.168};
+
+		var marker = new google.maps.Marker({
+  			position: seminyak,
+  			map: map,
+  			name: "seminyak" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #15 */
+		var austin  = {lat: 30.267, lng: -97.641};
+
+		var marker = new google.maps.Marker({
+  			position: austin,
+  			map: map,
+  			name: "austin" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);	
+
+		/* LOCATION #16 */
+		var denver  = {lat: 39.739, lng: -104.990};
+
+		var marker = new google.maps.Marker({
+  			position: denver,
+  			map: map,
+  			name: "denver" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #17 */
+		var gainesville  = {lat: 29.651, lng: -82.324};
+
+		var marker = new google.maps.Marker({
+  			position: gainesville,
+  			map: map,
+  			name: "gainesville" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #18 */
+		var bigsur  = {lat: 36.361, lng: -121.856};
+
+		var marker = new google.maps.Marker({
+  			position: bigsur,
+  			map: map,
+  			name: "bigsur" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);
+
+		/* LOCATION #19 */
+		var melb  = {lat: -37.813, lng: 144.963};
+
+		var marker = new google.maps.Marker({
+  			position: melb,
+  			map: map,
+  			name: "melb" 
+  			}); 
+
+  		// Detect when marker is clicked
+		marker.addListener("click", changeCity);	
 	}
 
 
@@ -85,61 +261,48 @@
 
 // On page load, hide images(ALL PHOTO CLASSES) in #photo-display & photo-display div
 	// Hides all images on page load
-	/*$(".sydney").hide();
-	$(".antelope").hide();
-	$(".perth").hide();
-	$(".nadi").hide();
-	$(".auckland").hide(); */
+
 	
 
 	function changeCity() {
 		//console.log(this)
 		var city = this.name
-    
-		//console.log("name", this.name)
+    	//console.log("name", this.name)
 			showCity(city) 
 	}
 
 
 // END MAP------------
 
-$("pin-map").click(function(){
-  var selected = $(this).attr("class");
-  console.log("selected", selected)
-  $("img").hide();
-  $("img[class="+selected+"]").show()
-})
 
-	function showCity(name) 
-	{
+	function showCity(name) {
     console.log("show", name)
-    $("#photo-display").show();
-    // $("#city-container").show();
-		// $("#city").hide();
-			$("#photo-display").attr("class", name);
-		// $("#city").attr("data-city", name);
-	}
-	// hide previous city
-
-
- 	/* function showPhotos() {
- 		$("#photo-display").show();
- 		//$("div#sydney .sydney").show();
- 	} */
-
- 	/* function showAntelope(){
-		$("div#antelope").show();
- 	}
-
- 	function showNadi() {
-		$("div#nadi").show();
- 	}
-
- 	function showAuckland() {
- 		$("div#auckland").show();
+    // Displays #photo-display area 
+    $("#photo-display").show()
+    // Hides all images on page load
+    $("#photo-display img").hide();
+    // Displays images on marker click
+    $("#photo-display img."+name+"").show()
 	}
 
-	function showSedona() {
-		$("div#sedona").show();
+
+	window.onscroll = function() {scrollFunction()};
+// when the user scrolls 20px down the page, make a back to top button appear
+	function scrollFunction() {
+    	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+    		// if ("body" > 20) || ("body" > 20)
+    	{
+        	document.getElementById("myBtn").style.display = "block";
+        	// $("myBtn").display = "block";
+    	} 
+    	else {
+        document.getElementById("myBtn").style.display = "none";
+        // $("myBtn").display = "none";
+    	}
 	}
-	*/
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; 
+}
+	

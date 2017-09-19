@@ -15,9 +15,31 @@ body#body-index {
 	grid-template-areas: "a"
 						 "b"
 						 "c"
-}						
+}	
 
-footer#footer-index {
+header nav {
+	grid-area: a;
+	background: black;
+	text-align: center;
+	padding: 45px; 
+}		
+
+header a {
+	color: white;
+	text-decoration: none;
+}	
+
+header a:hover {
+	color: gray;
+}	
+
+header ul {
+	color: white;
+	padding: 0;
+	font-size: 18px;
+}
+
+/*footer#footer-index {
 	grid-area: c; 
 	background: black;
 	text-align: center;
@@ -27,10 +49,10 @@ footer#footer-index {
 #footer-index a {
 	color: white;
 	text-decoration: none;
-	/* font-weight: 400; */
+	
 }
 
-#footer-index a:hover {
+/*#footer-index a:hover {
 	color: gray;
 }
 
@@ -39,7 +61,7 @@ footer#footer-index {
 	padding: 0;
 	font-size: 22px;
 }
-
+*/
 
 
 /* GALLERY CSS */
@@ -61,7 +83,8 @@ footer#footer-index {
 	background: black;
 	text-align: center;
 	padding-top: 15px;
-	padding-right: 10px;
+	/*padding-right: 10px;*/
+	z-index: 1;
 }
 
 #header-gallery ul { 
@@ -71,6 +94,7 @@ footer#footer-index {
 #header-gallery nav ul a {
 	color: white;
 	text-decoration: none;
+	font-size: 16px;
 }
 
 #header-gallery a:hover {
@@ -82,9 +106,8 @@ footer#footer-index {
 /* API Key: AIzaSyAK0FY1Gb0Z-Z_EYBOj7JZ0oDILr306sQU */
 #pin-map {
 	grid-area: b;
-	margin-bottom: 45px;
 	margin-right: 30px;
-	margin-left: 30px;
+	margin-left: 30px; 
 	height: 100%;
 } 
  /* PIN MAP END */
@@ -205,17 +228,19 @@ h1 {
 #footer-gallery {
 	grid-area: d;
 	background: black;
+	padding: 25px;
 }
 
 #footer-gallery nav ul {
 	color: white;
 	text-align: center;
-	padding-top: 50px;
+	padding: 25px;
 }
 
 #footer-gallery nav ul a {
 	color: white;
 	text-decoration: none;
+	font-size: 16px;
 }
 
 #footer-gallery nav ul a:hover {
